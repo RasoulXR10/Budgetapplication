@@ -18,25 +18,27 @@
 </head>
 
 <body>
-    <section class="container">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <nav>
-                    <div class="nav-wrapper">
-                        <a href="#" class="brand-logo-left">Accounting App</a>
-                        <ul id="" class = "right hide-on-med-and-down">
-                            <li class = "active"><a href = "#">Projects</a></li>
-                            <li><a href="#">Log Out</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <nav class=>
+                <div class="nav-wrapper" content="width=full-width">
+                    <a href="#" class="brand-logo-left">Accounting App</a>
+                    <ul id="" class = "right hide-on-med-and-down">
+                        <li class = "active"><a href = "{% url 'budget-home' %}">Projects</a></li>
+                        <li><a href="{% url 'user-profile' %}">Profile</a></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
+    </div>
+
+    <section class="section section-projects">
 
         {% block content %}
 
         {% endblock content %}
-
+    
     </section>
 
     <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           

@@ -14,6 +14,30 @@ projects = [
         'description': 'Second project description',
         'date_created': 'Jun 9, 2020'
     },
+    {
+        'author': 'rasoul',
+        'title': 'Budget Project 1',
+        'description': 'First project description',
+        'date_created': 'Jun 9, 2020'
+    },
+    {
+        'author': 'pouria',
+        'title': 'Budget Project 2',
+        'description': 'Second project description',
+        'date_created': 'Jun 9, 2020'
+    },
+    {
+        'author': 'rasoul',
+        'title': 'Budget Project 1',
+        'description': 'First project description',
+        'date_created': 'Jun 9, 2020'
+    },
+    {
+        'author': 'pouria',
+        'title': 'Budget Project 2',
+        'description': 'Second project description',
+        'date_created': 'Jun 9, 2020'
+    },
 ]
 
 

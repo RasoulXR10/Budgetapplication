@@ -2,7 +2,7 @@
 
 html {
     font-family: 'Montserrat';
-    background-color: #E0E0E0;
+    background-color: #222629;
 }
 
 /* General */
@@ -14,9 +14,17 @@ html {
     margin: 0!important;
 }
 
+
+.section-projects {
+    padding: 10px;
+    margin-top: 0px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
 /* project list (no project) */
 .noproject-wrapper {
-    margin-top: 250px;
+    margin-top: 50px;
     padding: 80px 0px;
     border: 6px dashed #9e9e9e;
 }
@@ -34,8 +42,9 @@ form ul li.category {
     margin-right: 5px;
 }
 
-.add-project-button {
+.btn.waves-effect {
     margin-right: 10px;
+    background-color: #86c232;
 }
 
 /* project detail statics */
@@ -76,5 +85,19 @@ form ul li.category {
 /* navbar */
 .nav-wrapper {
     padding-left: 20px;
-    background-color: #3d67c2;
+    background-color: #61892f;
+}
+
+/* card panel */
+.card-panel.background-color {
+    background-color: #373b3e;
+    color: white;
+}
+.text-card-color {
+    color: #aaacad;
+}
+
+/* username font */
+.text-username {
+    color: white;
 }

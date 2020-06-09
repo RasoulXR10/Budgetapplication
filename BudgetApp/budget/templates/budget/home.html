@@ -2,20 +2,45 @@
 
 {% block content %}
 
-    <section class="section section-projects">
-        <div class="row">
-            <button class="btn waves-effect right modal-trigger add-project-button" href="#">
-                <i class="material-icons white-text left">add_circle</i>
-                Add Project
-            </button>
-        </div>
+    <div class="row">
+        <ul>
+            <li>
+                <h3 class="text-username">My Projects</h3>
+            </li>
+            <li>
+                <button class="btn waves-effect right modal-trigger" href="#">
+                    <i class="material-icons white-text left">add_circle</i>
+                    Add Project
+                </button>
+            </li>
+        </ul>
+    </div>
+    <hr>
 
-    {% for project in projects %}
-        <strong>{{ project.author }}</strong>
-        <h1>{{ project.title }}</h1>
-        <p>Created on {{ project.date_created }}</p>
-        <p>{{ project.description }}</p>
-    {% endfor %}
-    </section>
+    <div class="row">
+        {% for project in projects %}
+
+            <div class="col s12 l3">
+                <div class="card-panel background-color">
+                    <strong class="text-card-color">{{ project.author }}</strong>
+                    <h3>{{ project.title }}</h3>
+                    <p class="text-card-color">Created on {{ project.date_created }}</p>
+                    <p class="text-card-color">{{ project.description }}</p>
+                    <a href="#" class="btn" style="background-color: #86c232">Visit</a>
+                </div>
+            </div>
+
+        {% empty %}
+
+            <div class="noproject-wrapper center">
+                <h3 class="grey-text">Sorry, you don't have any projects yet!</h3>
+                <button class="btn waves-effect center modal-trigger add-project-button" href="#">
+                    <i class="material-icons white-text left">add_circle</i>
+                    <span>Add Project</span>
+            </div>
+
+        {% endfor %}
+
+    </div>
 
 {% endblock content %}
