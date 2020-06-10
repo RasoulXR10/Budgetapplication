@@ -47,6 +47,10 @@ form ul li.category {
     background-color: #86c232;
 }
 
+.btn.visit-btn {
+    background-color: #86c232;
+}
+
 /* project detail statics */
 .section-stats h1 {
     font-size: 4vw;
@@ -94,10 +98,23 @@ form ul li.category {
     color: white;
 }
 .text-card-color {
-    color: #aaacad;
+    color: #61892F;
 }
 
 /* username font */
 .text-username {
     color: white;
+}
+
+/* row head */
+.text-username {
+    display: inline-block;
+}
+
+/* add project button on top */
+
+.add-top-project-btn {
+    margin-right: 0px;
+    display: inline-block;
+    padding-top: 42px;
 }

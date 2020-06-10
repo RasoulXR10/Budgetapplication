@@ -2,18 +2,19 @@
 
 {% block content %}
 
-    <div class="row">
-        <ul>
-            <li>
-                <h3 class="text-username">My Projects</h3>
-            </li>
-            <li>
-                <button class="btn waves-effect right modal-trigger" href="#">
-                    <i class="material-icons white-text left">add_circle</i>
-                    Add Project
-                </button>
-            </li>
-        </ul>
+    <div class="row-head">
+        <div class="col s12 l3">
+            <h3 class="text-username">My Projects</h3>
+            <ul class="right add-top-project-btn">
+                <li>
+                    <a href="{% url 'add-project' %}">
+                        <button class="btn waves-effect right modal-trigger" >
+                            <i class="material-icons white-text left">add_circle</i>
+                            Add Project
+                        </button>
+                    </a>
+                </li>
+            </ul>
     </div>
     <hr>
 
@@ -23,10 +24,10 @@
             <div class="col s12 l3">
                 <div class="card-panel background-color">
                     <strong class="text-card-color">{{ project.author }}</strong>
-                    <h3>{{ project.title }}</h3>
-                    <p class="text-card-color">Created on {{ project.date_created }}</p>
+                    <h3>{{ project.name }}</h3>
+                    <p class="text-card-color">Created on {{ project.date_created|date:"F d, Y" }}</p>
                     <p class="text-card-color">{{ project.description }}</p>
-                    <a href="#" class="btn" style="background-color: #86c232">Visit</a>
+                    <a href="#" class="btn visit-btn">Visit</a>
                 </div>
             </div>
 

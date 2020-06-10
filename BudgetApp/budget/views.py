@@ -1,52 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
-projects = [
-    {
-        'author': 'rasoul',
-        'title': 'Budget Project 1',
-        'description': 'First project description',
-        'date_created': 'Jun 9, 2020'
-    },
-    {
-        'author': 'pouria',
-        'title': 'Budget Project 2',
-        'description': 'Second project description',
-        'date_created': 'Jun 9, 2020'
-    },
-    {
-        'author': 'rasoul',
-        'title': 'Budget Project 1',
-        'description': 'First project description',
-        'date_created': 'Jun 9, 2020'
-    },
-    {
-        'author': 'pouria',
-        'title': 'Budget Project 2',
-        'description': 'Second project description',
-        'date_created': 'Jun 9, 2020'
-    },
-    {
-        'author': 'rasoul',
-        'title': 'Budget Project 1',
-        'description': 'First project description',
-        'date_created': 'Jun 9, 2020'
-    },
-    {
-        'author': 'pouria',
-        'title': 'Budget Project 2',
-        'description': 'Second project description',
-        'date_created': 'Jun 9, 2020'
-    },
-]
+from .models import Project
 
 
 def home(request):
     content = {
-        'projects': projects,
+        'projects': Project.objects.all(),
     }
     return render(request, 'budget/home.html', content)
 
 
 def profile(request):
     return render(request, 'budget/profile.html', {'title': 'Profile'})
+
+
+def add_project(request):
+    return render(request, 'budget/add-project.html', {'title': 'Add Project'})
