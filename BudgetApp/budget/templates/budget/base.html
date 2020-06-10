@@ -36,6 +36,17 @@
 
     <section class="section section-projects">
 
+        {% if messages %}
+            {% for message in messages %}
+
+                <div class="materialert success">
+		            <div class="material-icons">check</div>
+		                {{ message }}
+		        </div>
+                
+            {% endfor %}
+        {% endif %}
+
         {% block content %}
 
         {% endblock content %}

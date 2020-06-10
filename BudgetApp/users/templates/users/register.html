@@ -1,0 +1,30 @@
+{% extends 'budget/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+     <div class="container grey darken-3">
+        <fieldset>
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="section">
+                    <!-- welcome text should be display here -->
+                    {{ form|crispy }}
+                </div>
+                <div class="section">
+                    <button class="btn waves-effect waves-light teal darken-2" type="submit" name="action">Register Now
+                        <i class="material-icons right">person_add</i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="">
+                <smal>
+                    Already Have An Account?! <a href="#">Sign In</a>
+                </smal>
+            </div>
+        </fieldset>
+    <div>
+
+{% endblock content %}

@@ -7,7 +7,7 @@ from django.utils import timezone
 class Project(models.Model):
     name = models.CharField(max_length=100)
     budget = models.IntegerField()
-    description = models.CharField(max_length=500)
+    description = models.TextField(max_length=500)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     date_created = models.DateTimeField(default=timezone.now)
     date_modified = models.DateTimeField(auto_now=True)
