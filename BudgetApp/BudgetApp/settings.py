@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path.cwd()
@@ -124,3 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'materialize_css_forms'
+
+LOGIN_REDIRECT_URL = 'budget-home'
+
+LOGIN_URL = 'login'

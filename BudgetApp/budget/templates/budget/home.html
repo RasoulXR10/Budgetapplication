@@ -1,7 +1,7 @@
 {% extends 'budget/base.html' %}
 
 {% block content %}
-
+    {% if user.is_authenticated %}
     <div class="row-head">
         <div class="col s12 l3">
             <h3 class="text-username">My Projects</h3>
@@ -43,5 +43,13 @@
         {% endfor %}
 
     </div>
+    {% else %}
+
+        <h1 style="color: white">you should register/login to create project</h1>
+        <ul>
+            <li><a href="{% url 'login' %}">Log In</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+        </ul>
+    {% endif %}
 
 {% endblock content %}

@@ -3,8 +3,12 @@
 
 {% block content %}
 
-     <div class="container grey darken-3">
-        <fieldset>
+    <div class="container grey darken-3">
+        <div class="row">
+            <div class="col s12 center"><h3 style="color: white;">Join Today</h3></div>
+        </div>
+        
+        <div class="section" style="padding: 20px;">
             <form method="POST">
                 {% csrf_token %}
 
@@ -21,10 +25,34 @@
 
             <div class="">
                 <smal>
-                    Already Have An Account?! <a href="#">Sign In</a>
+                    Already Have An Account?! 
                 </smal>
+                    <!-- Modal Trigger -->
+                <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+
+                    <!-- Modal Structure -->
+                <div id="loginModal" class="modal">
+
+                    <div class="modal-content">
+                        <h4>Log In</h4>
+                        <p>Log in fields</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn login" type="submit" name="action">
+                            Log In
+                            <i class="material-icons right login-icon">perm_identity</i>
+                        </button>
+                        <button class="btn login" type="submit" name="action">
+                            Cancel
+                            <i class="material-icons right login-icon">perm_identity</i>
+                        </button>
+                    </div>
+
+                </div>
             </div>
-        </fieldset>
+        </div>
+        
     <div>
 
 {% endblock content %}

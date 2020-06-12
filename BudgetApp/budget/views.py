@@ -10,9 +10,5 @@ def home(request):
     return render(request, 'budget/home.html', content)
 
 
-def profile(request):
-    return render(request, 'budget/profile.html', {'title': 'Profile'})
-
-
 def add_project(request):
     return render(request, 'budget/add-project.html', {'title': 'Add Project'})
