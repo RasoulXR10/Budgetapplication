@@ -8,7 +8,9 @@ class Project(models.Model):
     name = models.CharField(max_length=100)
     budget = models.IntegerField()
     description = models.TextField(max_length=500)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)  # one to many
+    image = models.ImageField(
+        default='default-project.jpg', upload_to='project_pics')
     date_created = models.DateTimeField(default=timezone.now)
     date_modified = models.DateTimeField(auto_now=True)
 

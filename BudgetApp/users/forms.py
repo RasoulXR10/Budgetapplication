@@ -8,7 +8,8 @@ class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
     def __init__(self, *args, **kwargs):
-        super(UserRegisterForm, self).__init__(*args, **kwargs)
+        super(UserRegisterForm, self).__init__(
+            *args, **kwargs)  # what is super?
 
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
