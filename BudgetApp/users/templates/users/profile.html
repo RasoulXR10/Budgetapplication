@@ -28,6 +28,21 @@
                 </h5>
             </div>
         </div>
+         <form method="POST" enctype="multipart/form-data"> <!-- enctype is for image field that can save in database, otherwise we have a problem in saving images in backend -->
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col s12 center"><h3 style="color: white;">Profile info</h3></div>
+                </div>
+                <div class="section">
+                    {{ u_form|crispy }}
+                    {{ p_form|crispy }}
+                </div>
+                <div class="section">
+                    <button class="btn waves-effect waves-light teal darken-2" type="submit" name="action">Update
+                        <i class="material-icons right">person_add</i>
+                    </button>
+                </div>
+        </form>
     </div>
 
 
